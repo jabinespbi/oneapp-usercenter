@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@header-height: 60px;
+@default-font-size: 0.875rem;
+
+body {
+  background-color: #f0f2f5;
+  font-size: @default-font-size;
+}
+
+.form-control {
+  font-size: @default-font-size;
+
+  &[readonly] {
+    cursor: default;
+
+    &:focus {
+      border: 1px solid #ced4da;
+      box-shadow: none;
+    }
+  }
+
+  input {
+    height: 34px;
+    color: #303030;
+  }
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.fill {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.more-info-1 {
+  color: #303030;
+}
+
+.more-info-2 {
+  color: #666;
+}

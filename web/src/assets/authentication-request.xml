@@ -1,0 +1,12 @@
+<saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"
+                     AssertionConsumerServiceURL="http://localhost:4200/login/saml2/sso/okta"
+                     Destination="https://dev-42085807.okta.com/app/dev-42085807_myangular_1/exk8j8tsu1n9mTZL85d7/sso/saml"
+                     ForceAuthn="false"
+                     ID="ARQ1da5e2f-f44d-4845-b0ba-0840ea4364b8"
+                     IsPassive="false"
+                     IssueInstant="2023-03-02T04:50:16.048Z"
+                     ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                     Version="2.0"
+>
+<saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">http://localhost:4200/saml2/service-provider-metadata/okta</saml2:Issuer>
+</saml2p:AuthnRequest>

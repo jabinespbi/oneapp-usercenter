@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <ul>
+    <li routerLink="{{item.routerLink}}" class="item {{item.active}}" (click)="setActive(item)"
+        *ngFor="let item of items">
+      <i class="icons bi {{item.icon}}"></i>
+      <a>{{item.name}}</a>
+    </li>
+  </ul>
+</div>
