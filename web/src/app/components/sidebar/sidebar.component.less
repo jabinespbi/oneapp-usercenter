@@ -1,0 +1,42 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.sidebar {
+  ul {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    li {
+      list-style-type: none;
+      margin: 10px 0 0;
+      padding: 10px 15px;
+
+      a {
+        line-height: 30px;
+        font-size: 14px;
+        display: block;
+        height: auto;
+        white-space: nowrap;
+      }
+
+      .icons {
+        float: left;
+        font-size: 24px;
+        margin-right: 15px;
+        line-height: 30px;
+        width: 30px;
+        text-align: center;
+      }
+    }
+
+    .item.active, .item.active:hover {
+      background-color: rgba(41, 41, 97, 0.1);
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .item:hover {
+      cursor: pointer;
+      background-color: rgba(41, 41, 97, 0.05);
+    }
+  }
+}

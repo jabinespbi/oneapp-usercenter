@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: "postgres:latest"
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=oneapp
+      - POSTGRES_USER=oneapp
+      - POSTGRES_DATABASE=oneapp

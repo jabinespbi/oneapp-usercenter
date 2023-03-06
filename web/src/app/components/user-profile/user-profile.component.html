@@ -1,0 +1,93 @@
+<div class="container-fluid user-center">
+  <app-header></app-header>
+  <div class="row fill">
+    <div class="col-md-2 sidebar-wrapper">
+      <app-sidebar [initialActiveItem]="'User Profile'"></app-sidebar>
+    </div>
+    <div class="col-md-10 content-container">
+      <div class="row fill">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 content-wrapper">
+          <div class="row">
+            <div class="form-group error-panel" [style.visibility]="isMessageHidden? 'hidden': 'visible'">
+              <ngb-alert [type]="alertType">{{ message }}</ngb-alert>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <h4>Main settings</h4>
+              <p class="more-info-1">This information will appear on your profile.</p>
+            </div>
+            <div class="col-lg-8">
+              <form [formGroup]="mainSettingsGroup" (ngSubmit)="onSubmit()">
+                <div class="col-lg-10 mb-3">
+                  <label class="form-label" for="fullName">Full name</label>
+                  <input type="text" class="form-control" id="fullName" formControlName="fullName">
+                  <p class="more-info-2">Enter your name, so people you know can recognize you.</p>
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="pronouns">Pronouns</label>
+                  <input type="email" class="form-control" id="pronouns" formControlName="pronouns">
+                  <p class="more-info-2">Enter your pronouns to let people know how to refer to you.</p>
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="pronunciation">Pronunciation</label>
+                  <input type="email" class="form-control" id="pronunciation" formControlName="pronunciation">
+                  <p class="more-info-2">Enter how your name is pronounced to help people address you correctly.</p>
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="location">Location</label>
+                  <input type="email" class="form-control" id="location" formControlName="location"
+                         placeholder="City, country">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="jobTitle">Job title</label>
+                  <input type="email" class="form-control" id="jobTitle" formControlName="jobTitle">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="organization">Organization</label>
+                  <input type="email" class="form-control" id="organization" formControlName="organization">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="skype">Skype</label>
+                  <input type="email" class="form-control" id="skype" formControlName="skype" placeholder="username">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="linkedin">Linkedin</label>
+                  <input type="email" class="form-control" id="linkedin" formControlName="linkedin">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="twitter">Twitter</label>
+                  <input type="email" class="form-control" id="twitter" formControlName="twitter"
+                         placeholder="@username">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="facebook">Facebook</label>
+                  <input type="email" class="form-control" id="facebook" formControlName="facebook">
+                </div>
+                <div class="col-lg-7 mb-3">
+                  <label class="form-label" for="websiteUrl">Website url</label>
+                  <input type="email" class="form-control" id="websiteUrl" formControlName="websiteUrl"
+                         placeholder="https://website.com">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <label class="form-label" for="bio">Bio</label>
+                  <textarea class="form-control" id="bio" formControlName="bio" maxlength="250">
+                  </textarea>
+                  <p class="more-info-2">Tell us about yourself in fewer than 250 characters.</p>
+                </div>
+                <button type="submit" class="btn btn-sm btn-primary">Update profile settings</button>
+                <button (click)="onCancel()" class="btn btn-sm btn-secondary m-lg-2">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
